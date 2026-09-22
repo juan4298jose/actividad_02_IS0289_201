@@ -52,13 +52,47 @@ background-color:pink;
  <lebel>ingrese nombre</lebel><br>
     <input  type="number"><br>
     <label>salida</lebel>
-
+ <button  onclick="vender()"> 
+  venta
+ </button>
 
    
 
    </div>
    <script>
-      
+      var producto = [
+      {id:21,nombre:"peras",precio:"2000",categoria:"frutas" },
+      {id:22,nombre:"mantequilla",precio:"3000",categoria:"lacteos"},
+      {id:34,nombre:"arroz",precio:"2150",categoria:"granos"},
+      {id:54,nombre:"avichuela",precio:"2500",categoria:"legumbres"},
+      {id:67,nombre:"lechuga",precio:"4500",categoria:"verdueras"}
+ ];
+console.log("lista de frutas",listafrutas);
+  function vender(){
+ var listafrutas =   producto.filter( a => a.categoria == "frutas"   );
+ console.log("lista de frutas",listafrutas);
+    producto.filter( b => b.categoria = "lacteos"   );
+    producto.filter( c => c.categoria = "granos"   );
+    producto.filter( d => d.categoria = "legumbres"   );
+    producto.filter( e => e.categoria = "verduras"   );
+
+
+  // producto.map("  peras",21);
+  // producto.map("  mantequilla",22);
+  // producto.map("arroz",34);
+  //  producto.map("  avichuela",54);
+  //   producto.map(" lechuga",67);
+
+  
+
+  
+   }
+   
+       
+
+
+
+
    </script>
        
 
