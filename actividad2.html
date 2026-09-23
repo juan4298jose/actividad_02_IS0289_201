@@ -48,8 +48,8 @@ background-color:pink;
   <div id="right">
 
 <h1 id="title3"> ingrese nombre</h1> 
-  <div 
- <lebel>ingrese nombre</lebel><br>
+  <div> 
+ <label>ingrese nombre</lebel><br>
     <input  type="number"><br>
     <label>salida</lebel>
  <button  onclick="vender()"> 
@@ -61,28 +61,38 @@ background-color:pink;
    </div>
    <script>
       var producto = [
-      {id:21,nombre:"peras",precio:"2000",categoria:"frutas" },
-      {id:22,nombre:"mantequilla",precio:"3000",categoria:"lacteos"},
-      {id:34,nombre:"arroz",precio:"2150",categoria:"granos"},
-      {id:54,nombre:"avichuela",precio:"2500",categoria:"legumbres"},
-      {id:67,nombre:"lechuga",precio:"4500",categoria:"verdueras"}
+      {id:21,nombre:"peras",precio:2000,categoria:"frutas" },
+      {id:22,nombre:"mantequilla",precio:3000,categoria:"lacteos"},
+      {id:34,nombre:"arroz",precio:2150,categoria:"granos"},
+      {id:54,nombre:"avichuela",precio:2500,categoria:"legumbres"},
+     { id:55,nombre:"pimienta",precio:1000,categoria:"especies"},
  ];
-console.log("lista de frutas",listafrutas);
+
   function vender(){
  var listafrutas =   producto.filter( a => a.categoria == "frutas"   );
  console.log("lista de frutas",listafrutas);
-    producto.filter( b => b.categoria = "lacteos"   );
-    producto.filter( c => c.categoria = "granos"   );
-    producto.filter( d => d.categoria = "legumbres"   );
-    producto.filter( e => e.categoria = "verduras"   );
+ var listalacteos =  producto.filter( b => b.categoria == "lacteos"   );
+ console.log("lista lacteos",listalacteos);
+  var listagranos=  producto.filter( c => c.categoria == "granos"   );
+  console.log("lista granos",listagranos);
+    var listalegumbres= producto.filter( d => d.categoria == "legumbres"   );
+    console.log("lista legumbres",listalegumbres);
+var listaespecies= producto.filter(e => e.categoria =="especies");
+ console.log("lista de especies",listaespecies);
+
+const mercado= ["peras","mantequilla","arroz","avichuela","pimienta"];
+const productoss = mercado.map(mercado => mercado.toUpperCase());
+
+console.log("nombre productos",productoss);
+const numeros= [2000,3000,2150,2500,1000];
+
+const sumaTotal = numeros.reduce((total,numeros) => 
+{ return total+ numeros},0 );
+
+ console.log("la suma del precio de sus productoses de : ",sumaTotal,"$");
 
 
-  // producto.map("  peras",21);
-  // producto.map("  mantequilla",22);
-  // producto.map("arroz",34);
-  //  producto.map("  avichuela",54);
-  //   producto.map(" lechuga",67);
-
+   
   
 
   
